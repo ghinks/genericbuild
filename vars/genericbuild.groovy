@@ -2,12 +2,12 @@ def call(Map config=[:]){
 node {
     stage('SCM') {
     	echo 'Gathering code from version control'
-	git branch: '${branch}', url: 'https://github.com/FeynmanFan/JenkinsGroovy.git'
+	git branch: '${branch}', url: 'https://github.com/ghinks/JenkinsGroovy.git'
     }
     stage('Build') {
 	try{
 	        echo 'Building....'
-    		sh "dotnet build " + config.target
+//    		sh "dotnet build " + config.target
 	        echo 'Building New Feature'
 		releasenotes(changes:"true")
         }catch(ex){
