@@ -9,7 +9,7 @@ node {
 	        echo 'Building....'
 //    		sh "dotnet build " + config.target
 	        echo 'Building New Feature'
-		releasenotes(changes:"true")
+//		releasenotes(changes:"true")
         }catch(ex){
         	echo 'Something went wrong'
         	echo ex.toString();
